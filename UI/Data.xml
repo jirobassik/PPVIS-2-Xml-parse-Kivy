@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <productid id="1">
+        <prname name="Вафли Витоша">
+            <manufacterer>
+                <namemn>Витьба</namemn>
+                <nap>300187443</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>500</quantity>
+                <address>Социалистическая 115</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="2">
+        <prname name="Печенье Овсяное">
+            <manufacterer>
+                <namemn>Слодыч</namemn>
+                <nap>100129695</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Некрасова 8</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="3">
+        <prname name="Печенье Овсяное">
+            <manufacterer>
+                <namemn>Коммунарка</namemn>
+                <nap>148596856</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Минская 29</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="4">
+        <prname name="Молоко">
+            <manufacterer>
+                <namemn>Бабушкина крынка</namemn>
+                <nap>15895667</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Рокоссовского 125</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="5">
+        <prname name="Зефир Бобруйский">
+            <manufacterer>
+                <namemn>Красный пищевик</namemn>
+                <nap>1789542301</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Шмидта 13</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="6">
+        <prname name="Молоко">
+            <manufacterer>
+                <namemn>Савушкин продукт</namemn>
+                <nap>1478562348</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Некрасова 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+        <productid id="7">
+        <prname name="Минеральная вода">
+            <manufacterer>
+                <namemn>БелВода</namemn>
+                <nap>17855469852</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Социалистическая 115</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="8">
+        <prname name="Квас Лидский">
+            <manufacterer>
+                <namemn>Лидское пиво</namemn>
+                <nap>15479956585</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>5000</quantity>
+                <address>Ордженикидзе 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="9">
+        <prname name="Мороженое пломбир">
+            <manufacterer>
+                <namemn>Юкки</namemn>
+                <nap>1856249756</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>3000</quantity>
+                <address>Социалистическая 115</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="10">
+        <prname name="Печенье постное">
+            <manufacterer>
+                <namemn>Спартак</namemn>
+                <nap>1754231026</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>3400</quantity>
+                <address>Бобруйская 25</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="11">
+        <prname name="Honor 10">
+            <manufacterer>
+                <namemn>Huawei</namemn>
+                <nap>15885668568</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>500</quantity>
+                <address>Коласа 89</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="12">
+        <prname name="Игровой ноутбук">
+            <manufacterer>
+                <namemn>ASUS</namemn>
+                <nap>15856985685</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>500</quantity>
+                <address>Коласа 89</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="13">
+        <prname name="Торт смачный">
+            <manufacterer>
+                <namemn>Коммунарка</namemn>
+                <nap>184896565</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Некрасова 25</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="14">
+        <prname name="Конфета аленка">
+            <manufacterer>
+                <namemn>Коммунарка</namemn>
+                <nap>184896565</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>10000</quantity>
+                <address>Некрасова 25</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="15">
+        <prname name="Конфета красная шапочка">
+            <manufacterer>
+                <namemn>Коммунарка</namemn>
+                <nap>184896565</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>10000</quantity>
+                <address>Некрасова 25</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="16">
+        <prname name="Конфета коммунарка">
+            <manufacterer>
+                <namemn>Коммунарка</namemn>
+                <nap>184896565</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>5000</quantity>
+                <address>Некрасова 25</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="17">
+        <prname name="Сок Сочный">
+            <manufacterer>
+                <namemn>Оазис групп</namemn>
+                <nap>18756453669</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>4000</quantity>
+                <address>Минская 78</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="18">
+        <prname name="Мышка игровая">
+            <manufacterer>
+                <namemn>Logitech</namemn>
+                <nap>1896654756</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Минская 65</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="19">
+        <prname name="Наушники игровые">
+            <manufacterer>
+                <namemn>Steelseries</namemn>
+                <nap>178564239</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>500</quantity>
+                <address>Минская 65</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="20">
+        <prname name="Клавиатура игровая">
+            <manufacterer>
+                <namemn>Logitech</namemn>
+                <nap>1896654756</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Минская 65</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="21">
+        <prname name="Сыр">
+            <manufacterer>
+                <namemn>Брест Литовск</namemn>
+                <nap>1785965487</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Ордженикидзе 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="22">
+        <prname name="Сметана">
+            <manufacterer>
+                <namemn>Брест Литовск</namemn>
+                <nap>1785965487</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Ордженикидзе 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="23">
+        <prname name="Кефир">
+            <manufacterer>
+                <namemn>Брест Литовск</namemn>
+                <nap>1785965487</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Ордженикидзе 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="24">
+        <prname name="Молоко">
+            <manufacterer>
+                <namemn>Брест Литовск</namemn>
+                <nap>1785965487</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Ордженикидзе 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="25">
+        <prname name="Мороженое">
+            <manufacterer>
+                <namemn>Минский холод</namemn>
+                <nap>1854232689</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>ВЛКСМ 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="26">
+        <prname name="Часы наручный">
+            <manufacterer>
+                <namemn>Skagen</namemn>
+                <nap>112958654</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Платонова 114</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="27">
+        <prname name="Рюкзак">
+            <manufacterer>
+                <namemn>Ieger</namemn>
+                <nap>152369854</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1500</quantity>
+                <address>Гайдара 14</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="28">
+        <prname name="Кроссовки">
+            <manufacterer>
+                <namemn>Ecco</namemn>
+                <nap>1478569321</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1200</quantity>
+                <address>Гайдара 14</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="29">
+        <prname name="Беспроводные наушники">
+            <manufacterer>
+                <namemn>Xiaomi</namemn>
+                <nap>18569742236</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2500</quantity>
+                <address>Минская 14</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="30">
+        <prname name="Планшет">
+            <manufacterer>
+                <namemn>Apple</namemn>
+                <nap>1846956754</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>500</quantity>
+                <address>Пожарная 27</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="31">
+        <prname name="Телевизор">
+            <manufacterer>
+                <namemn>SONY</namemn>
+                <nap>1456982136</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>500</quantity>
+                <address>Бассейная 26</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="32">
+        <prname name="Видеокарта">
+            <manufacterer>
+                <namemn>ASUS</namemn>
+                <nap>19562178465</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1500</quantity>
+                <address>Бассейная 26</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="33">
+        <prname name="Колонки">
+            <manufacterer>
+                <namemn>SVEN</namemn>
+                <nap>14785649542</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2500</quantity>
+                <address>Парковая 13</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="34">
+        <prname name="Колонки">
+            <manufacterer>
+                <namemn>JBL</namemn>
+                <nap>185236447</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Парковая 13</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="35">
+        <prname name="Ножницы">
+            <manufacterer>
+                <namemn>БелМеталл</namemn>
+                <nap>1485956785</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>10000</quantity>
+                <address>Пожарная 27</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="36">
+        <prname name="Ручка">
+            <manufacterer>
+                <namemn>ErichKrause</namemn>
+                <nap>1874596235</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>10000</quantity>
+                <address>Мыльная 4</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="37">
+        <prname name="Жесткий диск">
+            <manufacterer>
+                <namemn>Toshiba</namemn>
+                <nap>196547523</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Некрасова 8</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="38">
+        <prname name="Проектор">
+            <manufacterer>
+                <namemn>SONY</namemn>
+                <nap>1456982136</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Речная 42</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="39">
+        <prname name="Сигареты">
+            <manufacterer>
+                <namemn>Winston</namemn>
+                <nap>1856945667</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2500</quantity>
+                <address>Лечебная 44</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="40">
+        <prname name="Сигареты">
+            <manufacterer>
+                <namemn>Kamel</namemn>
+                <nap>154789564</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1500</quantity>
+                <address>Лечебная 44</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="41">
+        <prname name="Шампунь">
+            <manufacterer>
+                <namemn>Белвита</namemn>
+                <nap>18956754</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1000</quantity>
+                <address>Лечебная 44</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="42">
+        <prname name="Шампунь">
+            <manufacterer>
+                <namemn>AXE</namemn>
+                <nap>189567568</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>10000</quantity>
+                <address>Некрасова 8</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="43">
+        <prname name="Батарейка">
+            <manufacterer>
+                <namemn>Duracell</namemn>
+                <nap>187466953</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>5000</quantity>
+                <address>Минская 65</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="44">
+        <prname name="Роутер">
+            <manufacterer>
+                <namemn>Huawei</namemn>
+                <nap>15885668568</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Коласа 89</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="45">
+        <prname name="Монитор">
+            <manufacterer>
+                <namemn>MSI</namemn>
+                <nap>14759265845</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>1500</quantity>
+                <address>ВЛКСМ 45</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="46">
+        <prname name="Лампочка">
+            <manufacterer>
+                <namemn>Toshiba</namemn>
+                <nap>196547523</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Гайдара 14</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="47">
+        <prname name="Смарт часы">
+            <manufacterer>
+                <namemn>Xiaomi</namemn>
+                <nap>18569742236</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2500</quantity>
+                <address>Минская 14</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="48">
+        <prname name="Геймпад">
+            <manufacterer>
+                <namemn>Microsoft</namemn>
+                <nap>1854962134</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>3000</quantity>
+                <address>Победная 21</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="49">
+        <prname name="Бритва">
+            <manufacterer>
+                <namemn>Philps</namemn>
+                <nap>147523366985</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>4000</quantity>
+                <address>Ломоносова 21</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="50">
+        <prname name="Лупа">
+            <manufacterer>
+                <namemn>БелСекло</namemn>
+                <nap>18563214786</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Ломоносова 21</address>
+            </warehouse>
+        </prname>
+    </productid>
+    <productid id="50">
+        <prname name="Лупа">
+            <manufacterer>
+                <namemn>БелСекло</namemn>
+                <nap>18563214786</nap>
+            </manufacterer>
+            <warehouse>
+                <quantity>2000</quantity>
+                <address>Ломоносова 21</address>
+            </warehouse>
+        </prname>
+    </productid>
+</products>

@@ -1,0 +1,685 @@
+WindowManager:
+    MainWindow:
+    AddWindow
+    SecondWindow:
+    SecondWindow_1:
+    SecondWindow_2:
+    SecondWindow_3:
+    ThirdWindow:
+    ThirdWindow_1:
+    ThirdWindow_2:
+    ThirdWindow_3:
+
+
+<MainWindow>:
+    name: "main"
+    main_label: main
+    second_label: hind_label
+
+    FloatLayout:
+        ScrollView:
+            #size_hint_y: 1
+            #size_hint_x: 0.9
+            size_hint: (None, None)
+            size: (1050, 500)
+            pos_hint: {"x": 0.17, 'y': 0.3}
+            Label:
+                id: main
+                text: root.main_labels
+                halign: 'left'
+                valign: 'top'
+                size_hint: None, None
+                size: self.texture_size
+                font_name: 'DroidSansMono'
+                background_color: (0, 0, 1, 0.1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        Label:
+            text: "Название товара"
+            size_hint: 0.155, 0.04
+            pos_hint: {"x": 0.17, 'y': 0.88}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            text: "Название производителя"
+            size_hint: 0.155, 0.04
+            pos_hint: {"x": 0.326, 'y': 0.88}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            text: "УНП товара"
+            size_hint: 0.088, 0.04
+            pos_hint: {"x": 0.483, 'y': 0.88}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            text: "Количество товара"
+            size_hint: 0.125, 0.04
+            pos_hint: {"x": 0.573, 'y': 0.88}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            text: "Адрес склада"
+            size_hint: 0.137, 0.04
+            pos_hint: {"x": 0.7, 'y': 0.88}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            id: hind_label
+            text: root.second_labels
+            size_hint: 0.3, 0.07
+            pos_hint: {"x": 0.35, 'y': 0.22}
+            background_color: (0, 0, 0, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+
+    BoxLayout:
+
+        Button:
+            text: "Удаление"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.55, 0.2
+            on_release:
+                app.root.current = "Delete"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Добавление"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.55, 0.2
+            on_release:
+                app.root.current = "Add"
+                root.manager.transition.direction = "up"
+
+        Button:
+            text: "Обновление"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.55, 0.2
+            on_press: root.update_data()
+
+        Button:
+            text: "Поиск"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.55, 0.2
+            on_release:
+                app.root.current = "Search"
+                root.manager.transition.direction = "left"
+
+<AddWindow>:
+    name: "Add"
+    input_1: input_add1
+    input_2: input_add2
+    input_3: input_add3
+    input_4: input_add4
+    input_5: input_add5
+    label_1: label_out
+
+    FloatLayout:
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "down"
+            on_press: root.clear()
+
+        Label:
+            id: label_add1
+            text: "Название товара"
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.01, 'y': 0.45}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            id: input_add1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.01, 'y': 0.35}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+        Label:
+            id: label_add2
+            text: "Название производителя"
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.21, 'y': 0.45}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            id: input_add2
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.21, 'y': 0.35}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+        Label:
+            id: label_add3
+            text: "УНП производителя"
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.41, 'y': 0.45}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            id: input_add3
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.41, 'y': 0.35}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+        Label:
+            id: label_add4
+            text: "Количество товара на складе"
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.61, 'y': 0.45}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            id: input_add4
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.61, 'y': 0.35}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+        Label:
+            id: label_add5
+            text: "Адрес склада"
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.81, 'y': 0.45}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            id: input_add5
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.81, 'y': 0.35}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+        Button:
+            text: "Добавить"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x": 0.3, 'y': 0.14}
+            on_press: root.add_data()
+
+        Button:
+            text: "Очистить поля"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.34, 0.1
+            pos_hint: {"x": 0.331, 'y': 0.04}
+            on_press: root.clear()
+
+        Label:
+            id: label_out
+            text: ""
+            size_hint: 0.32, 0.095
+            pos_hint: {"x": 0.34, 'y': 0.25}
+            background_color: (0, 0, 0, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+<SecondWindow>:
+    name: "Delete"
+
+    FloatLayout:
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "left"
+
+
+        Button:
+            text: "Удаление по названию товара или количеству на складе"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x": 0.3, 'y': 0.24}
+            on_release:
+                app.root.current = "Delete_3"
+                root.manager.transition.direction = "up"
+
+        Button:
+            text: "Удаление по названию производителя или УНП"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x": 0.3, 'y': 0.14}
+            on_release:
+                app.root.current = "Delete_2"
+                root.manager.transition.direction = "up"
+
+        Button:
+            text: "Удаление по адресу склада"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x": 0.3, 'y': 0.04}
+            on_release:
+                app.root.current = "Delete_1"
+                root.manager.transition.direction = "up"
+
+
+<SecondWindow_1>:
+    name: "Delete_1"
+    mylabel: label_2_1
+    del_input: input_1
+
+    FloatLayout:
+
+        Label:
+            text: ""
+            id: label_2_1
+            halign: 'center'
+            valign: 'top'
+            text_size: self.size
+            font_name: 'DroidSansMono'
+            size_hint: 0.75, 0.65
+            pos_hint: {"x": 0.14, 'y': 0.24}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "Delete"
+                root.manager.transition.direction = "down"
+            on_press: root.clear()
+
+        Button:
+            text: "Подтвердить ввод"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.02}
+            on_press: root.delete_address()
+
+        TextInput:
+            hint_text: "Адрес:"
+            id: input_1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.13}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+<SecondWindow_2>:
+    name: "Delete_2"
+    mylabel: label_2_1
+    del_input: input_1
+
+    FloatLayout:
+
+        Label:
+            text: ""
+            id: label_2_1
+            halign: 'center'
+            valign: 'top'
+            text_size: self.size
+            font_name: 'DroidSansMono'
+            size_hint: 0.75, 0.65
+            pos_hint: {"x": 0.14, 'y': 0.24}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "Delete"
+                root.manager.transition.direction = "down"
+            on_press: root.clear()
+
+        Button:
+            text: "Подтвердить ввод"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.02}
+            on_press: root.delete_namemn_nap()
+
+        TextInput:
+            hint_text: "Название производителя или УНП"
+            id: input_1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.13}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+<SecondWindow_3>:
+    name: "Delete_3"
+    mylabel: label_2_1
+    del_input: input_1
+
+    FloatLayout:
+
+        Label:
+            id: label_2_1
+            text: ""
+            halign: 'center'
+            valign: 'top'
+            text_size: self.size
+            font_name: 'DroidSansMono'
+            size_hint: 0.75, 0.65
+            pos_hint: {"x": 0.14, 'y': 0.24}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "Delete"
+                root.manager.transition.direction = "down"
+            on_press: root.clear()
+
+        Button:
+            text: "Подтвердить ввод"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.02}
+            on_press: root.delete_namepr_quantity()
+
+        TextInput:
+            hint_text: "Название товара или количество на складе"
+            id: input_1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.13}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+<ThirdWindow>:
+    name: "Search"
+
+    FloatLayout:
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Поиск по названию товара или количеству на складе"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x": 0.3, 'y': 0.24}
+            on_release:
+                app.root.current = "Search_3"
+                root.manager.transition.direction = "up"
+
+        Button:
+            text: "Поиск по названию производителя или УНП"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x": 0.3, 'y': 0.14}
+            on_release:
+                app.root.current = "Search_2"
+                root.manager.transition.direction = "up"
+
+        Button:
+            text: "Поиск по адресу склада"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x": 0.3, 'y': 0.04}
+            on_release:
+                app.root.current = "Search_1"
+                root.manager.transition.direction = "up"
+
+
+<ThirdWindow_1>:
+    name: "Search_1"
+    search_label: search_1
+    search_input: search_pr
+
+    FloatLayout:
+
+        Label:
+            id: search_1
+            text: ""
+            halign: 'center'
+            valign: 'top'
+            text_size: self.size
+            font_name: 'DroidSansMono'
+            size_hint: 0.75, 0.65
+            pos_hint: {"x": 0.14, 'y': 0.24}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "Search"
+                root.manager.transition.direction = "down"
+            on_press: root.clear()
+
+        Button:
+            text: "Подтвердить ввод"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.02}
+            on_press: root.search_pr1()
+
+        TextInput:
+            id: search_pr
+            hint_text: "Адрес"
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.13}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+<ThirdWindow_2>:
+    name: "Search_2"
+    search_label: search_2
+    search_input: search_pr2
+
+    FloatLayout:
+
+        Label:
+            id: search_2
+            text: ""
+            halign: 'center'
+            valign: 'top'
+            text_size: self.size
+            font_name: 'DroidSansMono'
+            size_hint: 0.75, 0.65
+            pos_hint: {"x": 0.14, 'y': 0.24}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "Search"
+                root.manager.transition.direction = "down"
+            on_press: root.clear()
+
+        Button:
+            text: "Подтвердить ввод"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.02}
+            on_press: root.search_pr2()
+
+        TextInput:
+            id: search_pr2
+            markup: True
+            hint_text: "Название производителя или УНП"
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.13}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
+
+
+<ThirdWindow_3>:
+    name: "Search_3"
+    search_label: search_3
+    search_input: search_pr3
+
+    FloatLayout:
+
+        Label:
+            id: search_3
+            text: ""
+            halign: 'center'
+            valign: 'top'
+            text_size: self.size
+            font_name: 'DroidSansMono'
+            size_hint: 0.75, 0.65
+            pos_hint: {"x": 0.14, 'y': 0.24}
+            background_color: (0, 0, 1, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Button:
+            text: "Назад"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.18, 0.1
+            pos_hint: {"x": 0.82, 'y': 0.89}
+            on_release:
+                app.root.current = "Search"
+                root.manager.transition.direction = "down"
+            on_press: root.clear()
+
+        Button:
+            text: "Подтвердить ввод"
+            background_color: 0.1, 0.5, 0.6, 1
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.02}
+            on_press: root.search_pr3()
+
+        TextInput:
+            id: search_pr3
+            hint_text: "Название товара или количество на складе"
+            size_hint: 0.3, 0.1
+            pos_hint: {"x": 0.37, 'y': 0.13}
+            background_color: 0.1, 0.5, 0.6, 1
+			foreground_color: 0, 0, 0, 1
