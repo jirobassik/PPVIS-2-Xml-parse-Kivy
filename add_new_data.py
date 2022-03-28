@@ -10,6 +10,19 @@ res_data_all = []
 def get_res_data_all():
     return res_data_all
 
+def get_res_search_data(search_el: str):
+    res_search_data = []
+    for i in get_res_data_all():
+        if search_el in i:
+            res_search_data.append(i)
+    return res_search_data
+
+def del_search_el(search_el:str):
+    for i in get_res_data_all ():
+        if search_el in i:
+            ind = get_res_data_all().index(i)
+            get_res_data_all().pop(ind)
+
 def data_to_mas():
     parser = xml.sax.make_parser()
     parser.setFeature(xml.sax.handler.feature_namespaces, 0)
