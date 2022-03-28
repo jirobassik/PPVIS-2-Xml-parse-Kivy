@@ -1,16 +1,16 @@
 from xml.dom import minidom
 
-class DeleteByAverageMarkDomHandler:
+class DeleteElementByID:
 
-    def init(self, student_id: str):
-        self._student_id = student_id
+    def init(self, product_id: str):
+        self._product_id = product_id
 
-    def delete_student_by_student_id(self) -> bool:
+    def delete_element(self) -> bool:
         xml = minidom.parse("D:/Programs/PyCharm Community Edition 2021.2.3/Project/PPVIS2/Data.xml")
         group = xml.documentElement
-        students = group.getElementsByTagName('productid')
-        for student in students:
-            if str(student.getAttribute('id')) == str(self._student_id):
-                student.parentNode.removeChild(student)
+        product = group.getElementsByTagName('productid')
+        for products in product:
+            if str(products.getAttribute('id')) == str(self._product_id):
+                products.parentNode.removeChild(products)
         xml.writexml(open('D:/Programs/PyCharm Community Edition 2021.2.3/Project/PPVIS2/Data.xml', 'w', encoding="UTF-8"), encoding="UTF-8")
         return True
