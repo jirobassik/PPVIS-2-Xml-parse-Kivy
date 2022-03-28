@@ -46,6 +46,9 @@ def get_num_data():
     parser.setContentHandler(handler)
     try:
         parser.parse("D:/Programs/PyCharm Community Edition 2021.2.3/Project/PPVIS2/Data.xml")
+        if get_res_data_all() != 0:
+            for i in get_res_data_all():
+                get_mas_all().append(i)
         stroka = f"В базе данных {len(get_mas_all())} элемент"
         get_mas_all().clear()
     except xml.sax._exceptions.SAXParseException:
