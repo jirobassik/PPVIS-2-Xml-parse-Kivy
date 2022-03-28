@@ -102,8 +102,21 @@ WindowManager:
         Label:
             id: hind_label
             text: root.second_labels
-            size_hint: 0.3, 0.07
-            pos_hint: {"x": 0.35, 'y': 0.22}
+            size_hint: 0.3, 0.04
+            pos_hint: {"x": 0.35, 'y': 0.2}
+            background_color: (0, 0, 0, 0.1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            id: num_label
+            text: root.num_labels
+            size_hint: 0.3, 0.04
+            pos_hint: {"x": 0.35, 'y': 0.25}
             background_color: (0, 0, 0, 0.1)
             canvas.before:
                 Color:

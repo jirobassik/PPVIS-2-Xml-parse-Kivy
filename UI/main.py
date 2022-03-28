@@ -1,7 +1,7 @@
 from parse.func_parse.func_search_address import search_address
 from parse.func_parse.func_search_namemn_nap import search_namemn_nap
 from parse.func_parse.func_search_namepr_quantity import search_name_quantity
-from parse.func_parse.func_add_all_data import add_all_data, get_mas_all_id
+from parse.func_parse.func_add_all_data import add_all_data, get_mas_all_id, get_num_data
 from parse.func_parse.func_add_all_data import update_data, print_all_id
 from parse.func_del.func_del_address import del_address
 from parse.func_del.func_del_namemn_nap import del_namemn_nap
@@ -19,16 +19,19 @@ Window.fullscreen = 'auto'
 class MainWindow(Screen):
     main_labels = StringProperty()
     second_labels = StringProperty()
+    num_labels = StringProperty()
 
     def __init__(self, **kw):
         super(MainWindow, self).__init__(**kw)
         self.main_labels = add_all_data()
+        self.num_labels = get_num_data()
         if len(get_mas_all_id()) > 0:
             self.second_labels = f"В xml файле есть незаполненное поле. Это данные со следующими id:" \
                                  f" {print_all_id()}"
 
     def update_data(self):
         self.main_labels = update_data()
+        self.num_labels = get_num_data()
 
 class AddWindow(Screen):
 
