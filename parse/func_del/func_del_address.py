@@ -1,7 +1,8 @@
 import xml.sax
 from parse.search_address_product import Search_Address
 from parse.search_address_product import get_mas_all, get_mas_all_id
-from parse.delete_dom import DeleteByAverageMarkDomHandler
+from parse.delete_dom import DeleteElementByID
+from add_new_data import get_res_search_data, del_search_el
 from tabulate import tabulate
 
 
@@ -12,17 +13,20 @@ def del_address(search_el):
     handler.set_input_search(search_el)
     parser.setContentHandler(handler)
     parser.parse("D:/Programs/PyCharm Community Edition 2021.2.3/Project/PPVIS2/Data.xml")
-    if len(get_mas_all_id()) == 0:
+    if len(get_mas_all_id()) == 0 and len(get_res_search_data(search_el)) == 0:
         a = "Не были найдены элементы"
     else:
+        for i in get_res_search_data(search_el):
+            get_mas_all().append(i)
+        del_search_el(search_el)
         head = ["Название товара", "Название производителя", "УНП товара",
                 "Количество товара", "Адрес склада"]
         data = get_mas_all()
         a = "Были удалены следующие элементы:\n"
         a += tabulate(data, headers=head, tablefmt="grid", stralign='center')
-        delete = DeleteByAverageMarkDomHandler()
+        delete = DeleteElementByID()
         for i in get_mas_all_id():
             delete.init(i)
-            delete.delete_student_by_student_id()
+            delete.delete_element()
         get_mas_all().clear()
     return a
