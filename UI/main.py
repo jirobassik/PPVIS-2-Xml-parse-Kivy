@@ -24,10 +24,10 @@ class MainWindow(Screen):
     def __init__(self, **kw):
         super(MainWindow, self).__init__(**kw)
         self.main_labels = add_all_data()
-        self.num_labels = get_num_data()
         if len(get_mas_all_id()) > 0:
             self.second_labels = f"В xml файле есть незаполненное поле. Это данные со следующими id:" \
                                  f" {print_all_id()}"
+        self.num_labels = get_num_data()
 
     def update_data(self):
         self.main_labels = update_data()
