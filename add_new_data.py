@@ -29,6 +29,9 @@ def data_to_mas():
     Handler = Add_All_Data()
     parser.setContentHandler(Handler)
     parser.parse("D:/Programs/PyCharm Community Edition 2021.2.3/Project/PPVIS2/Data.xml")
+    if get_res_data_all() != 0:
+        for i in get_res_data_all():
+            get_mas_all().append(i)
     data = copy.copy(get_mas_all())
     get_mas_all().clear()
     return data
@@ -60,3 +63,4 @@ class Add_data:
         self.res_data = copy.copy(copy_data)
         r = copy.copy(self.res_data)
         res_data_all.append(r)
+
